@@ -1,7 +1,8 @@
 import React from "react";
 import { Categories } from "../assets/mockData";
-
+import InfoSection from "../component/InfoSection";
 import HeroImage from "../assets/Images/hero-page.png";
+import CategorySection from "../component/CategorySection";
 const Home = () => {
   return (
     <div className="bg-white mt-2  px-4 md:px-16 lg:px-24 ">
@@ -22,13 +23,22 @@ const Home = () => {
         <div className="w-full md:w-9/12 mt-8 md:mt-0 h-96 relative">
           <img src={HeroImage} alt="" className="h-full w-full" />
           <div className="absolute top-16 left-8">
-            <p>this is it</p>
-            <h2>Welcome To the Shop</h2>
-            <p>products on products</p>
-            <button>Shop Now</button>
+            <p className="text-gray-600 mb-4">Let me do it for you</p>
+            <h2 className="text-3x1 font-bold">WELCOME TO E-SHOP</h2>
+            <p className="text-x1 mt-2.5 font-bold text-gray-800">
+              MILLION§+ PRODUCTS
+            </p>
+            <button
+              className="bg-red-600 px-8 py-1.5 text-white mt-4 hover:bg-red-700
+transform transition-transform duration-300 hover:scale-105"
+            >
+              SHOP NOW
+            </button>
           </div>
         </div>
       </div>
+      <InfoSection />
+      <CategorySection />
     </div>
   );
 };
