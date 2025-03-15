@@ -20,14 +20,20 @@ const categories = [
 
 const CategorySection = () => {
   return (
-    <div>
+    <div className="container mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6  ">
       {categories.map((category, index) => (
-        <div key={index}>
-          <img src={category.imageUrl} alt={category.title} />{" "}
-          {/* Corrected key */}
-          <div>
-            <p>{category.title}</p>
-            <p>view all</p>
+        <div
+          key={index}
+          className="relative h-64 transform transition-transform duration-300 hover:scale-105 cursor-pointer hover:shadow-lg hover:brightness-110"
+        >
+          <img
+            src={category.imageUrl}
+            alt={category.title}
+            className="w-full h-full object-cover rounded-lg shadow-md "
+          />
+          <div className="absolute top-20 left-12">
+            <p className="text-xl font-bold">{category.title}</p>
+            <p className="text-grey-600">view all</p>
           </div>
         </div>
       ))}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg=white shadow-md">
+    <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4 md:px-16 lg:px-24  py-4 flex justify-between items-center">
         <div className="text-lg font-bold">
           <Link to="/ ">e-shop</Link>
@@ -21,9 +21,9 @@ const Navbar = () => {
         </div>
         <div className="flex items-center space-x-4">
           <Link to="/cart">
-            <FaShoppingCart className="text:lg" />
+            <FaShoppingCart className="text-lg" />
           </Link>
-          <button className="bg=blue hidden md:block">Login|registor</button>
+          <button className="bg-blue hidden md:block">Login|registor</button>
           <button className="block md:hidden">
             <FaUser />
           </button>
@@ -33,7 +33,7 @@ const Navbar = () => {
         <Link to="/" className="hover:underLine">
           Home
         </Link>
-        <Link to="/" className="hover:underline">
+        <Link to="/shop" className="hover:underline">
           Shop
         </Link>
         <Link to="/" className="hover:underline">
