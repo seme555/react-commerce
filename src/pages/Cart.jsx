@@ -9,6 +9,7 @@ import {
   increaseQuantity,
   decreaseQuantity,
 } from "../redux/cartSlice";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
@@ -16,6 +17,7 @@ const Cart = () => {
   console.log(cart);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   return (
     <div className="container mx-auto py-8 min-h-96 px-4 md:px-16 lg:px-24">
@@ -108,7 +110,10 @@ const Cart = () => {
                 <span>${cart.totalPrice.toFixed(2)}</span>
               </div>
 
-              <button className="w-full bg-blue-600 text-white py-2 mt-4 rounded-lg hover:bg-blue-700">
+              <button
+                className="w-full bg-blue-600 text-white py-2 mt-4 rounded-lg hover:bg-blue-700"
+                onClick={() => navigate("/checkout")}
+              >
                 Proceed to Checkout
               </button>
             </div>
