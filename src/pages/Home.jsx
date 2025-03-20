@@ -6,7 +6,7 @@ import CategorySection from "../component/CategorySection";
 import { setProducts } from "../redux/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../component/productCard";
-import Shop from "./shop";
+import Shop from "./Shop";
 
 const Home = () => {
   const dispatch = useDispatch();
