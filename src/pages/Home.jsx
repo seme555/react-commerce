@@ -5,7 +5,7 @@ import HeroImage from "../assets/Images/hero-page.png";
 import CategorySection from "../component/CategorySection";
 import { setProducts } from "../redux/productSlice";
 import { useDispatch, useSelector } from "react-redux";
-import ProductCard from "../component/productCard";
+import ProductCard from "../component/ProductCard";
 import Shop from "./Shop";
 
 const Home = () => {
